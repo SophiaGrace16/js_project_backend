@@ -1,24 +1,24 @@
-# README
+# Pixar Easter Egg Hunt
+* This file contains the <b>Back End code</b> for this project
+* To see the <b>Front End Code</b> click here >> (https://github.com/SophiaGrace16/js_project_frontend.git)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+Structure:
 
-* Ruby version
+A MOVIE has many EG 
+An EG belongs to a MOVIE
 
-* System dependencies
+Movie
+    - Movie Name
+    - Year it was released
+    - Studio
+    - image
+    - link to watch
+    - IMDB Rating
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+EG
+    - EG movie
+    - easter_egg
+    - appearance time
+    - image
+    -
