@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  movie_name: MyString
+  date_released: 2020-12-08
+  studio_name: MyString
+  image: MyString
+  imdb: MyString
+  movie_link: MyString
+
+two:
+  movie_name: MyString
+  date_released: 2020-12-08
+  studio_name: MyString
+  image: MyString
+  imdb: MyString
+  movie_link: MyString

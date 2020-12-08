@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  egg_movie: MyString
+  egg: MyString
+  image: MyString
+  movie: one
+
+two:
+  egg_movie: MyString
+  egg: MyString
+  image: MyString
+  movie: two
