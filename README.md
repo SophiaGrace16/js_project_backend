@@ -19,6 +19,5 @@ Movie
 EG
     - EG movie
     - easter_egg
-    - appearance time
     - image
-    -
+
