@@ -5,12 +5,12 @@ class MoviesController < ApplicationController
   def index
     @movies = Movie.all
 
-    render json: @movies
+    render json: @movies.as_json(include: {eggs: {only:[:egg_movie, :egg, :image]}})
   end
 
   # GET /movies/1
   def show
-    render json: @movie
+    render json: @movie.as_json(include: {eggs: {only:[:egg_movie, :egg, :image]}})
   end
 
   # POST /movies
@@ -46,6 +46,6 @@ class MoviesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def movie_params
-      params.require(:movie).permit(:movie_name, :date_released, :studio_name, :image, :imdb, :movie_link)
+      params.require(:movie).permit(:movie_name, :date_released, :studio_name, :image, :imdb, :movie_link, piglets_attributes: [:name, :color, :sex, :cuteness_factor, :movie_id])
     end
 end
