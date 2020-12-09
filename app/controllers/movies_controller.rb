@@ -3,14 +3,20 @@ class MoviesController < ApplicationController
 
   # GET /movies
   def index
-    @movies = Movie.all
-
-    render json: @movies.as_json(include: {eggs: {only:[:egg_movie, :egg, :image]}})
+    binding.pry
+    if params[:movie_id]
+      @movie = Movie.find(params[:movie_id])
+      binding.pry
+      @movies = @movie.eggs
+    else
+      @movies = Movie.all
+    end
+    render json: @movies
   end
 
   # GET /movies/1
   def show
-    render json: @movie.as_json(include: {eggs: {only:[:egg_movie, :egg, :image]}})
+    render json: @movie
   end
 
   # POST /movies
