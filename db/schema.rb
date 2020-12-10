@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_08_160753) do
+ActiveRecord::Schema.define(version: 2020_12_10_160225) do
 
   create_table "eggs", force: :cascade do |t|
     t.string "egg_movie"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2020_12_08_160753) do
     t.integer "movie_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "found_count", default: 0
     t.index ["movie_id"], name: "index_eggs_on_movie_id"
   end
 
