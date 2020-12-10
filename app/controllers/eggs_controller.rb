@@ -3,7 +3,12 @@ class EggsController < ApplicationController
 
   # GET /eggs
   def index
-    @eggs = Egg.all
+    if params[:movie_id]
+      @movie = Movie.find(params[:movie_id])
+      @eggs = @movie.eggs
+    else
+      @eggs = Egg.all
+    end
 
     render json: @eggs
   end

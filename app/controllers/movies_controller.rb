@@ -3,15 +3,8 @@ class MoviesController < ApplicationController
 
   # GET /movies
   def index
-    binding.pry
-    if params[:movie_id]
-      @movie = Movie.find(params[:movie_id])
-      binding.pry
-      @movies = @movie.eggs
-    else
       @movies = Movie.all
-    end
-    render json: @movies
+      render json: @movies
   end
 
   # GET /movies/1
