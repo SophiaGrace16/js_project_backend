@@ -10,17 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_11_152227) do
+ActiveRecord::Schema.define(version: 2020_12_10_160225) do
 
   create_table "eggs", force: :cascade do |t|
     t.string "egg_movie"
     t.string "egg"
     t.string "image"
+    t.boolean "approved", default: false
     t.integer "movie_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "found_count", default: 0
-    t.boolean "approved", default: false
     t.index ["movie_id"], name: "index_eggs_on_movie_id"
   end
 
