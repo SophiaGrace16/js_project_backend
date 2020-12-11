@@ -20,8 +20,9 @@ class EggsController < ApplicationController
 
   # POST /eggs
   def create
+    binding.pry
     @egg = Egg.new(egg_params)
-
+    binding.pry
     if @egg.save
       render json: @egg, status: :created, location: @egg
     else
@@ -51,6 +52,6 @@ class EggsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def egg_params
-      params.require(:egg).permit(:egg_movie, :egg, :image, :movie_id, :found_count, :approved)
+      params.require(:egg).permit(:egg_movie, :egg, :image, :movie_id, :approved, :found_count)
     end
 end

@@ -10,11 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_10_160225) do
+ActiveRecord::Schema.define(version: 2020_12_11_202320) do
 
   create_table "eggs", force: :cascade do |t|
     t.string "egg_movie"
-    t.string "egg"
+    t.string "egg_obj"
     t.string "image"
     t.boolean "approved", default: false
     t.integer "movie_id", null: false
