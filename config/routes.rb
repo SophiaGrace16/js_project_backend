@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :eggs
   resources :movies do
     resources :eggs
   end

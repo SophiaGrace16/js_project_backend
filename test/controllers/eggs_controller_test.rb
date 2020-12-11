@@ -12,7 +12,7 @@ class EggsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create egg" do
     assert_difference('Egg.count') do
-      post eggs_url, params: { egg: { egg: @egg.egg, egg_movie: @egg.egg_movie, image: @egg.image, movie_id: @egg.movie_id } }, as: :json
+      post eggs_url, params: { egg: { egg_description: @egg.egg_description, egg_movie: @egg.egg_movie, image: @egg.image, movie_id: @egg.movie_id } }, as: :json
     end
 
     assert_response 201
@@ -24,7 +24,7 @@ class EggsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update egg" do
-    patch egg_url(@egg), params: { egg: { egg: @egg.egg, egg_movie: @egg.egg_movie, image: @egg.image, movie_id: @egg.movie_id } }, as: :json
+    patch egg_url(@egg), params: { egg: { egg_description: @egg.egg_description, egg_movie: @egg.egg_movie, image: @egg.image, movie_id: @egg.movie_id } }, as: :json
     assert_response 200
   end
 
