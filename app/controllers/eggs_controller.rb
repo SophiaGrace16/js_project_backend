@@ -51,6 +51,6 @@ class EggsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def egg_params
-      params.require(:egg).permit(:egg_movie, :egg, :image, :movie_id, :found_count)
+      params.require(:egg).permit(:egg_movie, :egg, :image, :movie_id, :found_count, :approved)
     end
 end
